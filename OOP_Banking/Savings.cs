@@ -7,6 +7,9 @@ namespace OOP_Banking {
 
         public double IntRate { get; set; } = .03;
 
+        public override string Print() {
+            return base.Print() + $" | {IntRate} ";
+        }
         public void PayInterest(decimal amountOfInterest) {
             this.Deposit(amountOfInterest);
 
@@ -15,5 +18,6 @@ namespace OOP_Banking {
             double interestToBePaid = this.IntRate / 12 * months * (double)this.GetBalance();
             return (decimal)interestToBePaid;
         }
+
     }
 }
