@@ -17,6 +17,7 @@ namespace OOP_Banking {
                 this.Balance += Amount;          
             }            
         }
+
         public void Withdraw(decimal Amount) {
             if (Amount <= 0) {
             Console.WriteLine($"Withdraw amount must be GT zero.");
