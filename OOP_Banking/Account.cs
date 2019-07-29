@@ -9,6 +9,11 @@ namespace OOP_Banking {
         public string Name { get; set; }
         public bool IsActive { get; set; } = true;
 
+
+        public decimal GetBalance() {
+            return this.Balance;
+        }
+
         public virtual string Print() {
             return $"{this.Number} | {this.Balance} | {this.Name}";
         }
@@ -44,48 +49,49 @@ namespace OOP_Banking {
                 }
                 return false;
             }
-            /*
-            public void Deposit(decimal Amount) {
-                 if (Amount <= 0) {
-                  Console.WriteLine($"Deposit amount must be GT zero.");
-                  }
-                  else {
-                  this.Balance += Amount;          
-                   } 
-            } 
-            public bool Withdraw(decimal Amount) {
-                if (Amount <= 0) {
+        }
+        public void Deposit(double Amount) {
+            if (Amount <= 0) {
+                Console.WriteLine($"Deposit amount must be GT zero.");
+            }
+            else {
+                this.Balance += (decimal)Amount;
+            }
+        }
+        public bool Withdraw(double Amount) {
+            if (Amount <= 0) {
                 Console.WriteLine($"Withdraw amount must be GT zero.");
                 return false;
+            }
+            else {
+                if (this.Balance >= (decimal)Amount) {
+                    this.Balance -= (decimal)Amount;
+                    return true;
                 }
-                else {
-                if (this.Balance >= Amount) {
-                this.Balance -= Amount;
-                return true;
-                     }
-                    return false;
-                } */
+                return false;
+            }
 
 
         }
-        /*   // change return from void to bool for transfer
-         *   
-           public void(decimal Amount) {
-               if (Amount <= 0) {
-               Console.WriteLine($"Withdraw amount must be GT zero.");
-               }
-               else {
-               if (this.Balance >= Amount) {
-                   this.Balance -= Amount;
-    }*/
+        // change return from void to bool for transfer
 
+        /// <summary>
+        /// Make a withdraw
+        /// </summary>
+        /// <param name="Amount">The amount you want </param>
+        public void Withdraw(float Amount) {
+            if (Amount <= 0) {
+                Console.WriteLine($"Withdraw amount must be GT zero.");
+            }
+            else {
+                if (this.Balance >= (decimal)Amount) {
+                    this.Balance -= (decimal)Amount;
+                }
 
-        public decimal GetBalance() {
-            return this.Balance;
+            }
         }
+
+
+
     }
 }
-
-
-
-

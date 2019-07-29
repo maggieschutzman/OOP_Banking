@@ -4,8 +4,9 @@ using System.Text;
 
 namespace OOP_Banking {
     class MoneyMarket : Account {
-    
-        public double monmarkrate { get; set; } = .03;
+
+        public decimal monmarkrate { get; set; } = .03M;
+        public decimal increasedrate { get; set; }
 
         public override string Print() {
             return base.Print() + $" | {monmarkrate} ";
@@ -22,11 +23,15 @@ namespace OOP_Banking {
 
                      Combined those two to make this method     */
         public void PayInterest(int months) {
-            double interestToBePaid =
-            this.monmarkrate / 12 * months * (double)this.GetBalance();
+            decimal interestToBePaid =
+            this.monmarkrate / 12 * months * (decimal)this.GetBalance();
             decimal intToBePaidAsDecimal = (decimal)interestToBePaid;
             this.Deposit(intToBePaidAsDecimal);
-
         }
-     }
-}
+        public void IncreaseInterest() {
+            increasedrate = ((decimal).05 * monmarkrate) + monmarkrate;
+            this.Deposit(increasedrate);
+        }
+    }
+    }
+
