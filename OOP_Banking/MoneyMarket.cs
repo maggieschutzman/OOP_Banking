@@ -15,12 +15,10 @@ namespace OOP_Banking {
                 public void PayInterest(decimal amountOfInterest) {
                     this.Deposit(amountOfInterest);
                 }
-
                 public decimal CalcInterest(int months) {
                     double interestToBePaid = this.IntRate / 12 * months * (double)this.GetBalance();
                     return (decimal)interestToBePaid;
                 } 
-
                      Combined those two to make this method     */
         public void PayInterest(int months) {
             decimal interestToBePaid =
@@ -28,10 +26,6 @@ namespace OOP_Banking {
             decimal intToBePaidAsDecimal = (decimal)interestToBePaid;
             this.Deposit(intToBePaidAsDecimal);
         }
-        public void IncreaseInterest() {
-            increasedrate = ((decimal).05 * monmarkrate) + monmarkrate;
-            this.Deposit(increasedrate);
-        }
     }
-    }
+}
 

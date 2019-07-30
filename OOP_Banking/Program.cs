@@ -7,18 +7,20 @@ namespace OOP_Banking {
             Savings sav1 = new Savings();
             sav1.Number = "SAV001";
             sav1.Name = "My Savings Account";
+            sav1.IntRate = 0.1;
 
             MoneyMarket monmar = new MoneyMarket();
             monmar.Number = "MM001";
             monmar.Name = "My Money Market Account";
-            monmar.monmarkrate = 0.3M;
+            monmar.monmarkrate = .03M;
 
             sav1.Deposit((decimal)5000);
-            sav1.PayInterest(12);
+            sav1.PayInterest(44);
+            sav1.ChangeRate(0.05);
+
             monmar.Deposit((decimal)4000);
-            monmar.Withdraw((decimal)100);
+            monmar.Withdraw((decimal)2000);
             monmar.PayInterest(24);
-            monmar.IncreaseInterest();
 
             decimal mmbal = monmar.GetBalance();
             
@@ -29,6 +31,7 @@ namespace OOP_Banking {
             }
 
             bool ItWorked = monmar.TransferTo(sav1, 50);
+
 
 
             //Console.WriteLine(sav1.Print());
