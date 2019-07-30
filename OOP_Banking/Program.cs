@@ -14,6 +14,12 @@ namespace OOP_Banking {
             monmar.Name = "My Money Market Account";
             monmar.monmarkrate = .03M;
 
+            Checking chk = new Checking();
+            chk.Number = "CHK001";
+            chk.Name = "My checking account";
+            chk.Deposit(100);
+            chk.Pay(100, 20);
+
             sav1.Deposit((decimal)5000);
             sav1.PayInterest(44);
             sav1.ChangeRate(0.05);
@@ -24,7 +30,7 @@ namespace OOP_Banking {
 
             decimal mmbal = monmar.GetBalance();
             
-            Account[] accounts = new Account[] { sav1, monmar };
+            Account[] accounts = new Account[] { sav1, monmar, chk };
 
 
             foreach (Account acct in accounts) {

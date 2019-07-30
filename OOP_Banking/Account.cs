@@ -9,7 +9,6 @@ namespace OOP_Banking {
         public string Name { get; set; }
         public bool IsActive { get; set; } = true;
 
-
         public decimal GetBalance() {
             return this.Balance;
         }
@@ -37,6 +36,7 @@ namespace OOP_Banking {
             }
             return false;
         }
+
         public bool Withdraw(decimal Amount) {
             if (Amount <= 0) {
                 Console.WriteLine($"Withdraw amount must be GT zero.");
@@ -50,26 +50,15 @@ namespace OOP_Banking {
                 return false;
             }
         }
-        public void Deposit(double Amount) {
-            if (Amount <= 0) {
-                Console.WriteLine($"Deposit amount must be GT zero.");
-            }
-            else {
-                this.Balance += (decimal)Amount;
-            }
+        //public void Deposit(double Amount) {
+        //    if (Amount <= 0) {
+        //        Console.WriteLine($"Deposit amount must be GT zero.");
+        //    }
+        //    else {
+        //        this.Balance += (decimal)Amount;
+        //    }
         }
-        public bool Withdraw(double Amount) {
-            if (Amount <= 0) {
-                Console.WriteLine($"Withdraw amount must be GT zero.");
-                return false;
-            }
-            else {
-                if (this.Balance >= (decimal)Amount) {
-                    this.Balance -= (decimal)Amount;
-                    return true;
-                }
-                return false;
-            }
+
 
 
         }
