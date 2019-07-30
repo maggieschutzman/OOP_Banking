@@ -11,10 +11,7 @@ namespace OOP_Banking {
         public override string Print() {
             return base.Print() + $" | {monmarkrate} ";
         }
-
-
-        /*
-                public void PayInterest(decimal amountOfInterest) {
+        /*        public void PayInterest(decimal amountOfInterest) {
                     this.Deposit(amountOfInterest);
                 }
                 public decimal CalcInterest(int months) {
