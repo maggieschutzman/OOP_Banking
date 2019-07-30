@@ -50,37 +50,8 @@ namespace OOP_Banking {
                 return false;
             }
         }
-        //public void Deposit(double Amount) {
-        //    if (Amount <= 0) {
-        //        Console.WriteLine($"Deposit amount must be GT zero.");
-        //    }
-        //    else {
-        //        this.Balance += (decimal)Amount;
-        //    }
-        }
-
-
-
-        }
-        // change return from void to bool for transfer
-
-        /// <summary>
-        /// Make a withdraw
-        /// </summary>
-        /// <param name="Amount">The amount you want </param>
-        public void Withdraw(float Amount) {
-            if (Amount <= 0) {
-                Console.WriteLine($"Withdraw amount must be GT zero.");
-            }
-            else {
-                if (this.Balance >= (decimal)Amount) {
-                    this.Balance -= (decimal)Amount;
-                }
-
-            }
-        }
-
-
-
     }
+
 }
+ 
+
