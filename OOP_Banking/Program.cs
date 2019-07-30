@@ -26,13 +26,12 @@ namespace OOP_Banking {
             
             Account[] accounts = new Account[] { sav1, monmar };
 
+
             foreach (Account acct in accounts) {
                 Console.WriteLine(acct.Print());               
             }
 
-            bool ItWorked = monmar.TransferTo(sav1, 50);
-
-
+            //bool ItWorked = monmar.TransferTo(sav1, 50);
 
             //Console.WriteLine(sav1.Print());
             //Console.WriteLine(monmar.Print());
