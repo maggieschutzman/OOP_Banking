@@ -9,6 +9,8 @@ namespace OOP_Banking {
         public string Name { get; set; }
         public bool IsActive { get; set; } = true;
 
+        public abstract void Save();
+
         public decimal GetBalance() {
             return this.Balance;
         }

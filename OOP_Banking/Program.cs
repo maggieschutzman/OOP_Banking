@@ -4,6 +4,8 @@ namespace OOP_Banking {
     class Program {
         static void Main(string[] args) {
 
+            var dummy = new IDummy();
+
             Savings sav1 = new Savings();
             sav1.Number = "SAV001";
             sav1.Name = "My Savings Account";
@@ -37,8 +39,8 @@ namespace OOP_Banking {
             }
 
             //bool ItWorked = monmar.TransferTo(sav1, 50);
-
           
-        }
-    }
-}
+          
+        } 
+    }     
+}         
